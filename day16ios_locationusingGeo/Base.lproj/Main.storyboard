@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-3R-Dp0">
+                                <rect key="frame" x="25" y="20" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.90102961029999995" green="0.36939380789999998" blue="0.60199156809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iB0-0T-De0"/>
+                                    <constraint firstAttribute="width" constant="320" id="kIA-LU-EZP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Co7-4x-2mP">
+                                <rect key="frame" x="47" y="99" width="291" height="459"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="459" id="4SE-fj-yfw"/>
+                                    <constraint firstAttribute="width" constant="291" id="ck9-r1-iHc"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lG-dG-6nO">
+                                <rect key="frame" x="100" y="597" width="185" height="30"/>
+                                <color key="backgroundColor" red="0.91241892440000005" green="1" blue="0.64365592319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JVb-kb-PSr"/>
+                                    <constraint firstAttribute="width" constant="185" id="pK8-sM-x4l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Detect Location"/>
+                                <connections>
+                                    <action selector="detectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLA-kd-dMW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.99607843159999998" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Co7-4x-2mP" firstAttribute="top" secondItem="WbH-3R-Dp0" secondAttribute="bottom" constant="49" id="2mI-ec-WNR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9lG-dG-6nO" secondAttribute="bottom" constant="40" id="7oG-oy-txK"/>
+                            <constraint firstAttribute="trailing" secondItem="9lG-dG-6nO" secondAttribute="trailing" constant="90" id="Fix-XS-LDw"/>
+                            <constraint firstAttribute="trailing" secondItem="WbH-3R-Dp0" secondAttribute="trailing" constant="30" id="Hk2-iA-fOx"/>
+                            <constraint firstItem="9lG-dG-6nO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="KRe-4W-aIb"/>
+                            <constraint firstItem="Co7-4x-2mP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="47" id="Kbu-7F-zFx"/>
+                            <constraint firstAttribute="trailing" secondItem="Co7-4x-2mP" secondAttribute="trailing" constant="37" id="S8Y-cS-Pbt"/>
+                            <constraint firstItem="9lG-dG-6nO" firstAttribute="top" secondItem="Co7-4x-2mP" secondAttribute="bottom" constant="39" id="eda-6u-ZPU"/>
+                            <constraint firstItem="WbH-3R-Dp0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="jDE-Tq-8IW"/>
+                            <constraint firstItem="WbH-3R-Dp0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kop-7v-wtP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressText" destination="WbH-3R-Dp0" id="yTP-qq-6XP"/>
+                        <outlet property="myMapView" destination="Co7-4x-2mP" id="Hcf-rD-acl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
